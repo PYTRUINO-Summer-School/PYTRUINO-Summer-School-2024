@@ -1,4 +1,5 @@
 import base64
+from ....utils import animations as anim
 ok = 1
 
 while ok:
@@ -9,10 +10,11 @@ while ok:
         flag = input("\n\nIntrodu flag-ul:")
         if flag == base64.b64decode("Y2NjZGRkYWFhZGRkYWJiYWE=".encode('ascii')).decode('ascii'):
             print("\n\nblack jack\n\n")
-            # trb sa adaug luminite pe matrice
+            anim.display_lock_animation()
             ok = 0
         else:
             print("\n\nWrong flag\n\n")
-            #animatie matrice cu x
+            anim.display_lock_closed()
+            
     else:
         print("\n\nChoose a valid option\n\n")

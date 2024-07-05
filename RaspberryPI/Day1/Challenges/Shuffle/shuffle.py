@@ -1,5 +1,10 @@
+import sys
+import os
+sys.path.append(os.path.abspath('../../..')) 
+
 import base64
-from ....utils import animations as anim
+import time
+from utils import animations as anim
 ok = 1
 
 while ok:
@@ -9,8 +14,11 @@ while ok:
     elif answer == 1:
         flag = input("\n\nIntrodu flag-ul:")
         if flag == base64.b64decode("Y2NjZGRkYWFhZGRkYWJiYWE=".encode('ascii')).decode('ascii'):
-            print("\n\nblack jack\n\n")
+            password = base64.b64decode('YmxhY2sgamFjaw=='.encode('ascii')).decode('ascii')
+            print("\n\n{}\n\n".format(password))
             anim.display_lock_animation()
+            time.sleep(1)
+            anim.clear()
             ok = 0
         else:
             print("\n\nWrong flag\n\n")

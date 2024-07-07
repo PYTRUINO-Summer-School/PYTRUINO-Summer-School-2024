@@ -17,7 +17,7 @@ if password == base64.b64decode('YmxhY2sgamFjaw=='.encode('ascii')).decode('asci
         elif answer == 1:
             if matrix == anim.fibo:
                 new_password = base64.b64decode('U2FudGEgQ2xhdXM='.encode('ascii')).decode('ascii')
-                print("\n\n{}\n\n".format(password))
+                print("\n\n{}\n\n".format(new_password))
                 anim.fibo_draw()
                 anim.clear()
                 ok = 0
@@ -27,6 +27,6 @@ if password == base64.b64decode('YmxhY2sgamFjaw=='.encode('ascii')).decode('asci
             
         else:
             print("\n\nChoose a valid option\n\n")
-    else:
-        print("\n\nNu ai gasit parola pentru Challenge\n\n")
+else:
+    print("\n\nNu ai gasit parola pentru Challenge\n\n")
 
